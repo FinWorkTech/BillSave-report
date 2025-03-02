@@ -130,14 +130,51 @@ En un sistema, el diseño de la interfaz de usuario (UI) juega un papel fundamen
 
 El área de diseño de interfaz se enfoca en crear soluciones visuales intuitivas que optimicen la interacción con el sistema, asegurando que las transacciones financieras, consultas de datos y gestiones operativas se realicen de manera clara y sin fricciones. Para ello, se aplican principios de diseño centrado en el usuario (UX/UI), alineados con normativas de accesibilidad y estándares de la industria financiera.
 
+Figura 1
+Imagen inicio de sesión
 <img src="assets/imagenes/inicio_sesion.PNG" alt="inicio" width="300px"/>
+Nota: Pantalla inicial para el usuario.
+
+Figura 2
+Imagen de registro
 <img src="assets/imagenes/registro.PNG" alt="inicio" width="300px"/>
+Nota: Pantalla de aplicativo para registro de nuevos usuarios.
+
+Figura 3
+Imagen de inicio
 <img src="assets/imagenes/inicio.PNG" alt="inicio" width="300px"/>
+Nota: Pantalla de inicio del usuario registrado.
+
+Figura 4
+Imagen de reportes
 <img src="assets/imagenes/Reportes.PNG" alt="inicio" width="300px"/>
+Nota: Pantalla que muestra los reportes registrados por el usuario.
+
+Figura 5
+Imagen bokeh con muchos colores
 <img src="assets/imagenes/Reg_reporte.PNG" alt="inicio" width="300px"/>
+Nota: 
+
+Figura 6
+Imagen bokeh con muchos colores
 <img src="assets/imagenes/Crear.PNG" alt="inicio" width="300px"/>
+Nota: 
+
+
+Figura 7
+Imagen bokeh con muchos colores
 <img src="assets/imagenes/Reporte_Espe.PNG" alt="inicio" width="300px"/>
+Nota: 
+
+
+Figura 8
+Imagen bokeh con muchos colores
 <img src="assets/imagenes/Portafolio.PNG" alt="inicio" width="300px"/>
+Nota: 
+
+
+Figura 9
+Imagen bokeh con muchos colores
 <img src="assets/imagenes/User.PNG" alt="inicio" width="300px"/>
 
 
