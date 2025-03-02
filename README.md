@@ -102,7 +102,7 @@ Explicación de los términos y conceptos clave utilizados en el proyecto.
 - Pseudocódigo, Diagrama de Flujo o Diagrama de Nassi-Schneiderman que ilustre la solución.
 
 ## Modelo de la Base de datos
-
+![Modelo de base de datos creado en Vertabelo](assets/imagenes/TF_FINANZAS-2025-03-02_12-26.png)
 
 ## Sistema de información
 - Implementación del análisis y diseño del sistema utilizando un lenguaje de programación orientado al desarrollo web o móvil.  
