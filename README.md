@@ -164,4 +164,4 @@ Este modelo permite gestionar usuarios con perfiles, administrar documentos fina
 
 ## Bibliografía
 
-Markdown (s/f) *Basic Syntax* Recuperado el 2 de marzo de 2025, de (https://www.markdownguide.org/basic-syntax/).
+Markdown. (s/f). *Basic Syntax*. Recuperado el 2 de marzo de 2025, de (https://www.markdownguide.org/basic-syntax/)
