@@ -140,8 +140,9 @@ Imagen de registro
 <img src="assets/imagenes/registro.PNG" alt="inicio" width="300px"/>
 Nota: Pantalla de aplicativo para registro de nuevos usuarios.
 
-Figura 3
-Imagen de inicio
+
+<h4 style="text-align: center; margin-bottom: 1.2rem;">Figura 3</h4>
+<table border="1" style="margin: auto;">
 <img src="assets/imagenes/inicio.PNG" alt="inicio" width="300px"/>
 Nota: Pantalla de inicio del usuario registrado.
 
