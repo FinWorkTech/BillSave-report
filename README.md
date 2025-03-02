@@ -101,6 +101,7 @@ Para validar la correcta implementación del modelo desarrollado en la administr
 **Primer Juego de Datos de Prueba**
 
 Este escenario simula una factura en dólares con una tasa nominal.
+
 Due date: 2025-04-01
 Issue date: 2025-03-01
 Rate value: 0.12
@@ -114,6 +115,7 @@ Nominal amount: 1000
 **Segundo Juego de Datos de Prueba**
 
 Este escenario simula una factura en dólares con una tasa efectiva.
+
 Due date: 2026-05-02
 Issue date: 2026-04-01
 Rate value: 0.015
