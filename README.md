@@ -106,9 +106,10 @@ Explicación de los términos y conceptos clave utilizados en el proyecto.
 Este modelo de base de datos representa la gestión de usuarios, documentos financieros y paquetes de descuento de facturas.
 
 1. User
-   - id (PK): Identificador único del usuario.
+  - id (PK): Identificador único del usuario.
   - Username: Nombre de usuario para autenticación.
   - Password: Contraseña del usuario.
+
     Relaciones:
     - Se relaciona con Profiles (Perfiles) mediante User_id (1 usuario tiene 1 perfil).
     - Se relaciona con Packs (Paquetes de descuento), indicando que un usuario puede administrar varios paquetes.
