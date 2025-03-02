@@ -87,7 +87,7 @@ Un número nominal es un número que se utiliza únicamente como un identificado
 
 # Marco Legal y Teórico
 
-En el Perú, el marco normativo que regula las acciones y el mercado de valores se basa en varias leyes y regulaciones clave diseñadas para garantizar la transparencia y el correcto funcionamiento de las actividades financieras. A continuación, se destacan las principales normativas aplicables:
+En el Perú, el marco normativo que regula las acciones y el mercado de valores se basa en varias leyes y regulaciones clave diseñadas para garantizar la transparencia y el correcto funcionamiento de las actividades financieras. teniendo a la Superintendencia de Banca, Seguros y AFP del Perú como fuente principal, podemos destacar las principales normativas aplicables:
 
 Artículo 29º. 		. INSCRIPCIÓN DE ACCIONES DE LA EMPRESA EN LA BOLSA. Antes de que las empresas bancarias, financieras y de arrendamiento financiero, así como las empresas del sistema de seguros, inicien sus operaciones con el público, deberán tener inscritas en bolsa las acciones representativas de su capital social. La Superintendencia podrá exigir a aquellas empresas no comprendidas en el párrafo anterior, su inscripción en bolsa, cuando así lo considere pertinente.
 
@@ -122,6 +122,14 @@ Donde:
 ### Diseño de la Interface
 - Presentación de las pantallas de interacción con el sistema.  
 - Uso de medios electrónicos para recibir ayuda sobre el uso del sistema.
+
+
+
+
+
+
+
+
 
 ### Marco conceptual (fórmulas)
 - Presentación del modelo matemático y las fórmulas utilizadas en la aplicación, como el cálculo del Valor Recibido y la TCEA.
