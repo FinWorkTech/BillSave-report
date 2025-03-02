@@ -119,7 +119,7 @@ Este modelo de base de datos representa la gestión de usuarios, documentos fina
   - User_id (FK): Relación con la tabla User, lo que indica que cada usuario tiene un único perfil.
   Relaciones:
     - User (1 a 1). Un usuario tiene un perfil asociado.
-    - 
+
 3. Documents
   - id (PK): Identificador único del documento.
   - Code: Código del documento.
@@ -130,7 +130,7 @@ Este modelo de base de datos representa la gestión de usuarios, documentos fina
   - RateValue: Valor de la tasa de interés.
   - Currency: Tipo de moneda (bit: 0 = Soles, 1 = Dólares).
   - portfolio_id: Relacionado con una posible tabla de portafolios (no está en el diagrama).
-  Relaciones:
+    Relaciones:
     - Se relaciona con Packs, indicando que un paquete de descuento puede agrupar varios documentos.
   
 4. Packs
