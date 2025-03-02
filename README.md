@@ -146,30 +146,30 @@ Nota: Pantalla de inicio del usuario registrado.
 
 <h4 style="text-align: center; margin-bottom: 1.2rem;">Figura 4</h4>
 <img src="assets/imagenes/Reportes.PNG" alt="inicio" width="300px"/>
-Nota: Pantalla que muestra los reportes registrados por el usuario.
+Nota: Pantalla que muestra los portafolios registrados por el usuario.
 
 <h4 style="text-align: center; margin-bottom: 1.2rem;">Figura 5</h4>
 <img src="assets/imagenes/Reg_reporte.PNG" alt="inicio" width="300px"/>
-Nota: 
+Nota: Pantalla en donde el usuario registra nuevos portafolios.
 
 <h4 style="text-align: center; margin-bottom: 1.2rem;">Figura 6</h4>
 <img src="assets/imagenes/Crear.PNG" alt="inicio" width="300px"/>
-Nota: 
+Nota: Pantalla en donde el usuario puede buscar el portafolio por medio del nombre y fecha de emisión.
 
 
 <h4 style="text-align: center; margin-bottom: 1.2rem;">Figura 7</h4>
 <img src="assets/imagenes/Reporte_espe.PNG" alt="inicio" width="300px"/>
-Nota: 
+Nota: Pantalla por la cual se puede ver los reportes de los portafolios y/o creal uno nuevo.
 
 
 <h4 style="text-align: center; margin-bottom: 1.2rem;">Figura 8</h4>
 <img src="assets/imagenes/Portafolio.PNG" alt="inicio" width="300px"/>
-Nota: 
+Nota: Pantalla del portafolio.
 
 
 <h4 style="text-align: center; margin-bottom: 1.2rem;">Figura 9</h4>
 <img src="assets/imagenes/User.PNG" alt="inicio" width="300px"/>
-Nota:
+Nota: Pantalla en donde el usuario puede visualizar/modificar su perfil.
 
 
 
@@ -198,4 +198,9 @@ Nota:
 - Presentación de alto impacto académico/comercial de la aplicación, encartes, brochures informativos u otros materiales relacionados con la aplicación.
 
 ## Bibliografía
-- Referencias bibliográficas utilizadas para el desarrollo del proyecto.
+      Superintendencia de Banca, Seguros y AFP. (s.f.). 
+https://www.sbs.gob.pe/Portals/3/educacion-financiera-pdf/4_Productos%20y%20servicios%202018.pdf
+
+      Santander. (2023).
+https://www.santanderassetmanagement.es/que-es-una-cartera-de-valores/
+
