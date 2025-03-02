@@ -104,7 +104,7 @@ Explicación de los términos y conceptos clave utilizados en el proyecto.
 ## Modelo de la Base de datos
 ![Modelo Base de Datos](assets/imagenes/TF_FINANZAS-2025-03-02_12-26.png)
 
-Este modelo de base de datos representa la gestión de usuarios, documentos financieros y paquetes de descuento de facturas.
+Este modelo permite gestionar usuarios con perfiles, administrar documentos financieros y agruparlos en paquetes de descuento para calcular la TCEA y manejar tasas nominales o efectivas en diferentes monedas.
 
 **1. User**
   - id (PK): Identificador único del usuario.
@@ -119,8 +119,8 @@ Este modelo de base de datos representa la gestión de usuarios, documentos fina
   - id (PK): Identificador único del perfil.
   - FullName: Nombre completo del usuario.
   - User_id (FK): Relación con la tabla User, lo que indica que cada usuario tiene un único perfil.
-  
-  Relaciones:
+
+    Relaciones:
     - User (1 a 1). Un usuario tiene un perfil asociado.
 
 **3. Documents**
