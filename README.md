@@ -112,8 +112,8 @@ Este modelo permite gestionar usuarios con perfiles, administrar documentos fina
   - Password: Contraseña del usuario.
 
     Relaciones:
-    - Se relaciona con Profiles (Perfiles) mediante User_id (1 usuario tiene 1 perfil).
-    - Se relaciona con Packs (Paquetes de descuento), indicando que un usuario puede administrar varios paquetes.
+    - Se relaciona con Profiles mediante User_id (1 usuario tiene 1 perfil).
+    - Se relaciona con Packs, indicando que un usuario puede administrar varios paquetes.
       
 **2. Profiles**
   - id (PK): Identificador único del perfil.
@@ -132,7 +132,7 @@ Este modelo permite gestionar usuarios con perfiles, administrar documentos fina
   - TypeRate: Tipo de tasa (bit: 0 = Nominal, 1 = Efectiva).
   - RateValue: Valor de la tasa de interés.
   - Currency: Tipo de moneda (bit: 0 = Soles, 1 = Dólares).
-  - portfolio_id: Relacionado con una posible tabla de portafolios (no está en el diagrama).
+  - portfolio_id: Relacionado con portafolios.
 
     Relaciones:
     - Se relaciona con Packs, indicando que un paquete de descuento puede agrupar varios documentos.
