@@ -114,6 +114,9 @@ Donde:
 
 ## Análisis y Diseño del Sistema
 
+
+
+
 ### Análisis de Datos
 - **Datos de Entrada**: Descripción de las constantes/variables, tipos, tamaños, formatos, valores por defecto y restricciones.  
 - **Datos de Salida**: Descripción de las variables, tipos, tamaños y formatos.  
@@ -123,9 +126,11 @@ Donde:
 - Presentación de las pantallas de interacción con el sistema.  
 - Uso de medios electrónicos para recibir ayuda sobre el uso del sistema.
 
+En un sistema, el diseño de la interfaz de usuario (UI) juega un papel fundamental en la experiencia y eficiencia de los usuarios. Un diseño bien estructurado no solo facilita la navegación y el acceso a la información clave, sino que también garantiza seguridad, accesibilidad y usabilidad en cada interacción.
 
+El área de diseño de interfaz se enfoca en crear soluciones visuales intuitivas que optimicen la interacción con el sistema, asegurando que las transacciones financieras, consultas de datos y gestiones operativas se realicen de manera clara y sin fricciones. Para ello, se aplican principios de diseño centrado en el usuario (UX/UI), alineados con normativas de accesibilidad y estándares de la industria financiera.
 
-
+<img src="https://shorturl.at/7M79G" alt="BillSave Logo" width="300px"/>
 
 
 
