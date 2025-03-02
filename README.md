@@ -103,9 +103,10 @@ Explicación de los términos y conceptos clave utilizados en el proyecto.
 
 ## Modelo de la Base de datos
 ![Modelo Base de Datos](assets/imagenes/TF_FINANZAS-2025-03-02_12-26.png)
+
 Este modelo de base de datos representa la gestión de usuarios, documentos financieros y paquetes de descuento de facturas.
 
-1. User
+**1. User**
   - id (PK): Identificador único del usuario.
   - Username: Nombre de usuario para autenticación.
   - Password: Contraseña del usuario.
@@ -114,14 +115,15 @@ Este modelo de base de datos representa la gestión de usuarios, documentos fina
     - Se relaciona con Profiles (Perfiles) mediante User_id (1 usuario tiene 1 perfil).
     - Se relaciona con Packs (Paquetes de descuento), indicando que un usuario puede administrar varios paquetes.
       
-2. Profiles
+**2. Profiles**
   - id (PK): Identificador único del perfil.
   - FullName: Nombre completo del usuario.
   - User_id (FK): Relación con la tabla User, lo que indica que cada usuario tiene un único perfil.
+  
   Relaciones:
     - User (1 a 1). Un usuario tiene un perfil asociado.
 
-3. Documents
+**3. Documents**
   - id (PK): Identificador único del documento.
   - Code: Código del documento.
   - NominalAmount: Monto nominal de la factura o letra.
@@ -131,10 +133,11 @@ Este modelo de base de datos representa la gestión de usuarios, documentos fina
   - RateValue: Valor de la tasa de interés.
   - Currency: Tipo de moneda (bit: 0 = Soles, 1 = Dólares).
   - portfolio_id: Relacionado con una posible tabla de portafolios (no está en el diagrama).
+
     Relaciones:
     - Se relaciona con Packs, indicando que un paquete de descuento puede agrupar varios documentos.
   
-4. Packs
+**4. Packs**
   - id (PK): Identificador único del paquete.
   - Name: Nombre del paquete.
   - DiscountDate: Fecha en la que se aplica el descuento.
@@ -142,7 +145,8 @@ Este modelo de base de datos representa la gestión de usuarios, documentos fina
   - EffectiveAnnualCostR: Tasa de Costo Efectivo Anual (TCEA).
   - User_id (FK): Relación con User, indicando quién creó el paquete.
   - Documents_id (FK): Relación con Documents, indicando qué documentos están en el paquete.
-  Relaciones:
+  
+    Relaciones:
     - Relacionado con User, indicando que cada usuario puede administrar varios paquetes de descuento.
     - Relacionado con Documents, ya que un paquete de descuento puede contener varios documentos financieros.
 
