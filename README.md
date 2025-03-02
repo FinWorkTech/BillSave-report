@@ -102,11 +102,11 @@ Para validar la correcta implementación del modelo desarrollado en la administr
 
 Este escenario simula una factura en dólares con una tasa nominal.
 
-Due date: 2025-04-01
-Issue date: 2025-03-01
-Rate value: 0.12
-Rate type: Nominal
-Nominal amount: 1000
+- Due date: 2025-04-01
+- Issue date: 2025-03-01
+- Rate value: 0.12
+- Rate type: Nominal
+- Nominal amount: 1000
 
 **Cálculos esperado:**
 
@@ -116,11 +116,11 @@ Nominal amount: 1000
 
 Este escenario simula una factura en dólares con una tasa efectiva.
 
-Due date: 2026-05-02
-Issue date: 2026-04-01
-Rate value: 0.015
-Rate type: Effective
-Nominal amount: 2000
+- Due date: 2026-05-02
+- Issue date: 2026-04-01
+- Rate value: 0.015
+- Rate type: Effective
+- Nominal amount: 2000
 
 **Cálculo esperado:**
 
@@ -129,11 +129,11 @@ Nominal amount: 2000
 ***Tercer Juego de Datos de Prueba***
 
 Este escenario simula una factura en dólares con una tasa nominal.
-Due date: 2026-03-03
-Issue date: 2025-02-01
-Rate value: 0.18
-Rate type: Nominal
-Nominal amount: 15000
+- Due date: 2026-03-03
+- Issue date: 2025-02-01
+- Rate value: 0.18
+- Rate type: Nominal
+- Nominal amount: 15000
 
 **Cálculo esperado:**
 
