@@ -99,6 +99,7 @@ Explicación de los términos y conceptos clave utilizados en el proyecto.
 Para validar la correcta implementación del modelo desarrollado en la administración de cartera de descuento de facturas,  se han diseñado dos conjuntos de datos de prueba. Estos datos permiten comprobar la veracidad del cálculo de la Tasa de Coste Efectivo Anual (TCEA)
 
 **Primer Juego de Datos de Prueba**
+
 Este escenario simula una factura en dólares con una tasa nominal.
 Due date: 2025-04-01
 Issue date: 2025-03-01
@@ -107,9 +108,11 @@ Rate type: Nominal
 Nominal amount: 1000
 
 **Cálculos esperado:**
+
 ***TCEA:*** 0.126825 = 12.68%
 
 **Segundo Juego de Datos de Prueba**
+
 Este escenario simula una factura en dólares con una tasa efectiva.
 Due date: 2026-05-02
 Issue date: 2026-04-01
@@ -118,9 +121,11 @@ Rate type: Effective
 Nominal amount: 2000
 
 **Cálculo esperado:**
+
 ***TCEA:*** 0.015 = 1.5%
 
 ***Tercer Juego de Datos de Prueba***
+
 Este escenario simula una factura en dólares con una tasa nominal.
 Due date: 2026-03-03
 Issue date: 2025-02-01
@@ -129,6 +134,7 @@ Rate type: Nominal
 Nominal amount: 15000
 
 **Cálculo esperado:**
+
 ***TCEA:*** 0.195618 = 19.56%
 
 ## Algoritmo
