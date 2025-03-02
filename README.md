@@ -102,7 +102,50 @@ Explicación de los términos y conceptos clave utilizados en el proyecto.
 - Pseudocódigo, Diagrama de Flujo o Diagrama de Nassi-Schneiderman que ilustre la solución.
 
 ## Modelo de la Base de datos
-![Modelo de base de datos creado en Vertabelo](assets/imagenes/TF_FINANZAS-2025-03-02_12-26.png)
+![Modelo Base de Datos](assets/imagenes/TF_FINANZAS-2025-03-02_12-26.png)
+Este modelo de base de datos representa la gestión de usuarios, documentos financieros y paquetes de descuento de facturas.
+
+1. User
+   - id (PK): Identificador único del usuario.
+  - Username: Nombre de usuario para autenticación.
+  - Password: Contraseña del usuario.
+    Relaciones:
+    - Se relaciona con Profiles (Perfiles) mediante User_id (1 usuario tiene 1 perfil).
+    - Se relaciona con Packs (Paquetes de descuento), indicando que un usuario puede administrar varios paquetes.
+      
+2. Profiles
+  - id (PK): Identificador único del perfil.
+  - FullName: Nombre completo del usuario.
+  - User_id (FK): Relación con la tabla User, lo que indica que cada usuario tiene un único perfil.
+  Relaciones:
+    - User (1 a 1). Un usuario tiene un perfil asociado.
+    - 
+3. Documents
+  - id (PK): Identificador único del documento.
+  - Code: Código del documento.
+  - NominalAmount: Monto nominal de la factura o letra.
+  - IssueDate: Fecha de emisión del documento.
+  - DueDate: Fecha de vencimiento del documento.
+  - TypeRate: Tipo de tasa (bit: 0 = Nominal, 1 = Efectiva).
+  - RateValue: Valor de la tasa de interés.
+  - Currency: Tipo de moneda (bit: 0 = Soles, 1 = Dólares).
+  - portfolio_id: Relacionado con una posible tabla de portafolios (no está en el diagrama).
+  Relaciones:
+    - Se relaciona con Packs, indicando que un paquete de descuento puede agrupar varios documentos.
+  
+4. Packs
+  - id (PK): Identificador único del paquete.
+  - Name: Nombre del paquete.
+  - DiscountDate: Fecha en la que se aplica el descuento.
+  - TotalDocuments: Número total de documentos en el paquete.
+  - EffectiveAnnualCostR: Tasa de Costo Efectivo Anual (TCEA).
+  - User_id (FK): Relación con User, indicando quién creó el paquete.
+  - Documents_id (FK): Relación con Documents, indicando qué documentos están en el paquete.
+  Relaciones:
+    - Relacionado con User, indicando que cada usuario puede administrar varios paquetes de descuento.
+    - Relacionado con Documents, ya que un paquete de descuento puede contener varios documentos financieros.
+
+Este modelo permite gestionar usuarios con perfiles, administrar documentos financieros y agruparlos en paquetes de descuento para calcular la TCEA y manejar tasas nominales o efectivas en diferentes monedas.
 
 ## Sistema de información
 - Implementación del análisis y diseño del sistema utilizando un lenguaje de programación orientado al desarrollo web o móvil.  
