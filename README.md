@@ -158,7 +158,7 @@ Nota:
 
 
 <h4 style="text-align: center; margin-bottom: 1.2rem;">Figura 7</h4>
-<img src="assets/imagenes/Reporte_Espe.PNG" alt="inicio" width="300px"/>
+<img src="assets/imagenes/Reporte_espe.PNG" alt="inicio" width="300px"/>
 Nota: 
 
 
