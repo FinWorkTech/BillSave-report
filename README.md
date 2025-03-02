@@ -150,8 +150,6 @@ Este modelo permite gestionar usuarios con perfiles, administrar documentos fina
     - Relacionado con User, indicando que cada usuario puede administrar varios paquetes de descuento.
     - Relacionado con Documents, ya que un paquete de descuento puede contener varios documentos financieros.
 
-Este modelo permite gestionar usuarios con perfiles, administrar documentos financieros y agruparlos en paquetes de descuento para calcular la TCEA y manejar tasas nominales o efectivas en diferentes monedas.
-
 ## Sistema de información
 - Implementación del análisis y diseño del sistema utilizando un lenguaje de programación orientado al desarrollo web o móvil.  
 - Requisitos:  
