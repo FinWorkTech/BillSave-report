@@ -163,4 +163,5 @@ Este modelo permite gestionar usuarios con perfiles, administrar documentos fina
 - Presentación de alto impacto académico/comercial de la aplicación, encartes, brochures informativos u otros materiales relacionados con la aplicación.
 
 ## Bibliografía
-- Referencias bibliográficas utilizadas para el desarrollo del proyecto.
+
+Markdown (s/f) *Basic Syntax* Recuperado el 2 de marzo de 2025, de (https://www.markdownguide.org/basic-syntax/).
