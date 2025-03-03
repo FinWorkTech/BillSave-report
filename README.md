@@ -98,7 +98,7 @@ Explicación de los términos y conceptos clave utilizados en el proyecto.
 ### Diseño de Datos de prueba
 Para validar la correcta implementación del modelo desarrollado en la administración de cartera de descuento de facturas,  se han diseñado dos conjuntos de datos de prueba. Estos datos permiten comprobar la veracidad del cálculo de la Tasa de Coste Efectivo Anual (TCEA)
 
-**Primer Juego de Datos de Prueba**
+<ins>**Primer Juego de Datos de Prueba**<ins>
 
 Este escenario simula una factura en dólares con una tasa nominal.
 
