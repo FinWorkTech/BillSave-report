@@ -109,6 +109,7 @@ Este escenario simula una factura en dólares con una tasa nominal.
 - Nominal amount: 1000
 
 **Cálculos esperado:**
+![Doc1](assets/imagenes/Porftolio1.jpg)
 
 ***TCEA:*** 0.126825 = 12.68%
 
@@ -125,6 +126,7 @@ Este escenario simula una factura en dólares con una tasa efectiva.
 **Cálculo esperado:**
 
 ***TCEA:*** 0.015 = 1.5%
+![Doc2](assets/imagenes/Porftolio2.jpg)
 
 **Tercer Juego de Datos de Prueba**
 
@@ -136,6 +138,7 @@ Este escenario simula una factura en dólares con una tasa nominal.
 - Nominal amount: 15000
 
 **Cálculo esperado:**
+![Doc3](assets/imagenes/Porftolio3.jpg)
 
 ***TCEA:*** 0.195618 = 19.56%
 
