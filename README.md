@@ -114,7 +114,7 @@ Este escenario simula una factura en dólares con una tasa nominal.
 
 ***TCEA:*** 0.126825 = 12.68%
 
-**Segundo Juego de Datos de Prueba**
+<ins>**Segundo Juego de Datos de Prueba**<ins>
 
 Este escenario simula una factura en dólares con una tasa efectiva.
 
@@ -130,7 +130,7 @@ Este escenario simula una factura en dólares con una tasa efectiva.
 
 ***TCEA:*** 0.015 = 1.5%
 
-**Tercer Juego de Datos de Prueba**
+<ins>**Tercer Juego de Datos de Prueba**<ins>
 
 Este escenario simula una factura en dólares con una tasa nominal.
 - Due date: 2026-03-03
