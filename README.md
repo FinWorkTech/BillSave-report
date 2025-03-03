@@ -108,8 +108,9 @@ Este escenario simula una factura en dólares con una tasa nominal.
 - Rate type: Nominal
 - Nominal amount: 1000
 
-**Cálculos esperado:**
 ![Doc1](assets/imagenes/Portfolio1.jpg)
+
+**Cálculos esperado:**
 
 ***TCEA:*** 0.126825 = 12.68%
 
@@ -123,10 +124,11 @@ Este escenario simula una factura en dólares con una tasa efectiva.
 - Rate type: Effective
 - Nominal amount: 2000
 
+![Doc2](assets/imagenes/Portfolio2.jpg)
+
 **Cálculo esperado:**
 
 ***TCEA:*** 0.015 = 1.5%
-![Doc2](assets/imagenes/Portfolio2.jpg)
 
 **Tercer Juego de Datos de Prueba**
 
@@ -137,10 +139,13 @@ Este escenario simula una factura en dólares con una tasa nominal.
 - Rate type: Nominal
 - Nominal amount: 15000
 
-**Cálculo esperado:**
 ![Doc3](assets/imagenes/Porftolio3.jpg)
 
+**Cálculo esperado:**
+
 ***TCEA:*** 0.195618 = 19.56%
+
+![PortfolioTodos](assets/imagenes/VistaDePortfolios.png)
 
 ## Algoritmo
 - Pseudocódigo, Diagrama de Flujo o Diagrama de Nassi-Schneiderman que ilustre la solución.
