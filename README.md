@@ -417,132 +417,137 @@ Este modelo permite gestionar usuarios con perfiles, administrar documentos fina
     - Relacionado con User, indicando que cada usuario puede administrar varios paquetes de descuento.
     - Relacionado con Documents, ya que un paquete de descuento puede contener varios documentos financieros.
 
-## Sistema de información
-- Implementación del análisis y diseño del sistema utilizando un lenguaje de programación orientado al desarrollo web o móvil.  
-- Requisitos:  
-  a) Conectividad.  
-  b) Base de datos.  
-  c) Código fuente.  
-  d) Ayuda y asistencia técnica.  
-  e) Validación y pruebas.
+# BillSave - Documentación del Sistema de Información
 
-## 8. Sistema de Información
+## 8. Sistemas de Información
 
-### 8.1. Conectividad
+### **8.1. Conectividad**
+La aplicación **BillSave** sigue una arquitectura cliente-servidor basada en API RESTful, facilitando la comunicación entre el frontend y el backend.
 
-El sistema BillSave ha sido diseñado con una infraestructura que permite la comunicación eficiente entre los diferentes módulos y garantiza la seguridad de los datos. La conectividad en el sistema se ha implementado mediante los siguientes principios:
+#### **8.1.1. Comunicación entre Frontend y Backend**
+- **Frontend:** Desarrollado en **Vue.js**, usa **Axios** para realizar solicitudes HTTP a la API del backend.
+- **Backend:** Construido con **.NET Core y C#**, expone una API RESTful que maneja autenticación, gestión de carteras y facturas.
+- **Configuración de la API:**
+  ```env
+  VITE_API_BASE_URL=https://api.example.com
+  VITE_SUNAT_API_TOKEN=your-sunat-token-here
+  ```
 
-- **Protocolo seguro:** Se usa **HTTPS** para proteger la comunicación entre el cliente y el servidor.
-- **API RESTful:** El sistema utiliza una API basada en **REST** para permitir la interacción entre la interfaz de usuario y la base de datos.
-- **Base de datos en la nube:** PostgreSQL alojado en un servidor remoto, con acceso restringido a través de roles y autenticación segura.
-- **Autenticación con JSON Web Token (JWT):** Cada usuario que inicia sesión recibe un **token de autenticación** que permite el acceso a los distintos módulos del sistema.
-- **Escalabilidad y disponibilidad:** Se utiliza un balanceador de carga que distribuye las solicitudes en función del tráfico recibido.
+#### **8.1.2. Integraciones Externas**
+- **API de SUNAT**: Validación de facturas mediante consultas externas.
+- **Exportación de informes**: Generación de reportes en **Excel** desde el backend.
 
+#### **8.1.3. Infraestructura y Hosting**
+- **Servidor Backend:** Desplegado en **Azure**, **AWS** o servidores locales con soporte para .NET Core.
+- **Base de Datos:** Implementada en **MySQL**, gestionada con **Entity Framework Core**.
+- **Seguridad:** Implementación de **JWT** para autenticación de usuarios.
 
-### 8.2. Base de Datos y Desarrollo de Back-End
+---
 
-El sistema BillSave utiliza **PostgreSQL** como motor de base de datos, asegurando un almacenamiento eficiente y seguro de la información. 
+### **8.2. Base de Datos: Desarrollo de Backend**
+El backend de **BillSave** sigue los principios de **Domain-Driven Design (DDD)** y está estructurado en contextos delimitados como **Carteras**, **Facturas** y **Usuarios**.
 
-#### **8.2.1. Beneficios de PostgreSQL**
-- **Alto rendimiento y escalabilidad:** Capaz de manejar grandes volúmenes de datos sin comprometer la velocidad de procesamiento.
-- **Soporte para transacciones ACID:** Garantiza la integridad de los datos mediante la atomicidad, consistencia, aislamiento y durabilidad.
-- **Extensibilidad:** Permite la adición de nuevos tipos de datos y funciones personalizadas.
-- **Seguridad avanzada:** Soporta autenticación basada en roles y cifrado de datos en reposo y en tránsito.
+#### **8.2.1. Tecnologías Utilizadas**
+- **Lenguaje:** C# con .NET Core
+- **Base de Datos:** MySQL, gestionada con **Entity Framework Core**
+- **Autenticación:** JSON Web Tokens (**JWT**)
+- **Documentación API:** **Swagger** para facilitar la interacción con los endpoints
 
-#### **8.2.2. Tecnologías Utilizadas**
+#### **8.2.2. Entidades Principales**
+La base de datos está estructurada en las siguientes entidades:
+- **Usuarios:** Gestión de credenciales y roles.
+- **Carteras:** Portafolios financieros de facturas.
+- **Facturas:** Documentos financieros asociados a carteras.
+- **Reportes:** Generación y almacenamiento de informes.
 
-| Tecnología | Propósito |
-|------------|------------|
-| **PostgreSQL** | Base de datos para almacenar información de usuarios, carteras y documentos. |
-| **Spring Boot** | Framework en Java para gestionar la lógica del sistema. |
-| **Spring Data JPA** | Abstracción para la persistencia de datos. |
-| **Spring Security** | Mecanismo de autenticación y control de acceso. |
-| **JWT (JSON Web Token)** | Seguridad y autenticación de usuarios. |
-| **AWS S3** | Almacenamiento de reportes y documentos financieros. |
-| **Docker** | Contenedorización del backend para fácil despliegue. |
+#### **8.2.3. Estructura del Backend**
+El backend sigue una arquitectura en capas:
+1. **Capa de Presentación (API)** - Controladores de ASP.NET Core.
+2. **Capa de Aplicación** - Servicios y reglas de negocio.
+3. **Capa de Datos** - Repositorios con Entity Framework Core.
 
-#### **8.2.3. Estructura de la Base de Datos**
+---
 
-##### **Tabla: Usuario**
-| Campo | Tipo de Dato | Descripción |
-|--------|-------------|-------------|
-| id_usuario | INT (PK) | Identificador único del usuario. |
-| nombre | VARCHAR(100) | Nombre completo del usuario. |
-| correo | VARCHAR(100) | Correo electrónico del usuario. |
-| contraseña | TEXT | Contraseña encriptada. |
-| fecha_registro | TIMESTAMP | Fecha de creación de la cuenta. |
+### **8.3. Código Fuente**
 
-##### **Tabla: Carteras**
-| Campo | Tipo de Dato | Descripción |
-|--------|-------------|-------------|
-| id_cartera | INT (PK) | Identificador único de la cartera. |
-| nombre | VARCHAR(100) | Nombre de la cartera. |
-| fecha_descuento | DATE | Fecha de descuento. |
-| tcea | DECIMAL(10,2) | Tasa de Costo Efectiva Anual. |
-| usuario_id | INT (FK) | Relación con el usuario propietario. |
-
-##### **Tabla: Documentos**
-| Campo | Tipo de Dato | Descripción |
-|--------|-------------|-------------|
-| id_documento | INT (PK) | Identificador único del documento. |
-| id_cartera | INT (FK) | Relación con la cartera a la que pertenece. |
-| valor_nominal | DECIMAL(10,2) | Valor nominal del documento. |
-| fecha_emision | DATE | Fecha de emisión del documento. |
-| fecha_vencimiento | DATE | Fecha de vencimiento. |
-| tasa | DECIMAL(5,2) | Tasa de interés aplicada. |
-| moneda | VARCHAR(3) | Moneda del documento (S/ o USD). |
-
-### 8.3. Código Fuente y Gestión en GitHub
-
-Para este proyecto se utilizó **GitHub** como plataforma para alojar y gestionar de manera colaborativa los avances a lo largo del desarrollo del sistema. Las principales ventajas de su uso incluyen:
-
-- **Control de versiones:** Permite un seguimiento detallado de los cambios realizados en el código.
-- **Colaboración eficiente:** Facilita el trabajo en equipo a través de ramas (`branches`) y solicitudes de extracción (`pull requests`).
-- **Automatización:** Integración con **GitHub Actions** para realizar pruebas y despliegues automáticos.
-
-**Estructura del Repositorio:**
+#### **8.3.1. Estructura del Código**
+##### **Frontend (Vue.js)**
 ```
-/billsave-backend
-  ├── src/
-  │   ├── main/
-  │   │   ├── controllers/
-  │   │   ├── services/
-  │   │   ├── models/
-  │   │   ├── repository/
-  ├── application.properties
-  ├── pom.xml
+BillSave-app/
+│── src/
+│   ├── components/        # Componentes Vue
+│   ├── views/             # Vistas principales
+│   ├── router/            # Configuración de Vue Router
+│   ├── store/             # Gestión de estado con Pinia
+│   ├── api/               # Integración con Axios
+│   ├── assets/            # Archivos estáticos
+│   ├── main.js            # Punto de entrada de la aplicación
+│   ├── App.vue            # Componente principal
+│── public/
+│── package.json           # Dependencias del proyecto
+│── vite.config.js         # Configuración de Vite
+```
+##### **Backend (.NET Core con C#)**
+```
+BillSave-backend/
+│── BillSave.API/
+│   ├── Controllers/        # Endpoints RESTful
+│   ├── Services/           # Lógica de negocio
+│   ├── Models/             # Entidades de la base de datos
+│   ├── Repositories/       # Acceso a la base de datos
+│   ├── Program.cs          # Punto de inicio de la API
+│   ├── Startup.cs          # Configuración de dependencias
+│── appsettings.json        # Configuración de la API
+│── BillSave-backend.sln    # Archivo de solución para Visual Studio
 ```
 
-- **`controllers/`**: Gestiona las solicitudes HTTP.
-- **`services/`**: Contiene la lógica de negocio.
-- **`models/`**: Define las entidades de la base de datos.
-- **`repository/`**: Proporciona acceso a la base de datos.
+#### **8.3.2. Ejecución del Código**
+##### **Frontend (Vue.js)**
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/FinWorkTech/BillSave-app.git
+   cd BillSave-app
+   ```
+2. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+3. Configurar las variables de entorno en un archivo `.env`:
+   ```env
+   VITE_API_BASE_URL=https://api.example.com
+   VITE_SUNAT_API_TOKEN=your-sunat-token-here
+   ```
+4. Iniciar la aplicación:
+   ```bash
+   npm run dev
+   ```
 
-### 8.4. Soporte y Ayuda Técnica
+##### **Backend (.NET Core con C#)**
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/FinWorkTech/BillSave-backend.git
+   cd BillSave-backend
+   ```
+2. Abrir en **Visual Studio** y compilar el código:
+   ```bash
+   dotnet build
+   ```
+3. Ejecutar el backend:
+   ```bash
+   dotnet run
+   ```
+4. Acceder a la API en:
+   ```
+   http://localhost:5000/swagger
+   ```
 
-Para garantizar la asistencia técnica a los usuarios de BillSave, se han habilitado los siguientes canales:
+---
 
-1. **Soporte vía correo electrónico:** Disponible para resolver problemas técnicos y consultas generales.
-2. **Centro de ayuda en línea:** Documentación con guías de uso y resolución de problemas frecuentes.
-3. **Foro comunitario:** Espacio donde los usuarios pueden compartir experiencias y soluciones.
+### **Conclusión**
+El sistema de información de **BillSave** está diseñado con **Vue.js para el frontend, .NET Core con C# para el backend y MySQL como base de datos**. La comunicación se realiza mediante **API RESTful** con autenticación segura mediante **JWT**, integrándose con la **API de SUNAT** para validar documentos financieros y permitiendo la exportación de informes en **Excel**. 
 
-### 8.5. Pruebas y Validación del Sistema
+Este diseño facilita la gestión de carteras financieras y automatiza el cálculo de la **TCEA**, optimizando la administración de documentos financieros.
 
-Para asegurar la calidad del software, se han llevado a cabo las siguientes pruebas:
-
-- **Pruebas Unitarias:** Validación de cada componente con **JUnit**.
-- **Pruebas de Integración:** Verificación de la comunicación entre módulos usando **Postman**.
-- **Pruebas de Seguridad:** Evaluación de autenticación con **OWASP ZAP**.
-- **Pruebas de Rendimiento:** Simulación de carga con **JMeter**.
-
-#### **8.5.1. Resultados de las Pruebas**
-| Tipo de Prueba | Resultado |
-|----------------|------------|
-| Inicio de sesión | ✅ Exitoso |
-| Registro de usuarios | ✅ Exitoso |
-| Creación de cartera | ✅ Exitoso |
-| Cálculo de TCEA | ✅ Validado |
-| Generación de reportes | ✅ Sin errores |
 
 ## Anexos
 - Presentación de alto impacto académico/comercial de la aplicación, encartes, brochures informativos u otros materiales relacionados con la aplicación.
