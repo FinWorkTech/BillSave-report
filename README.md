@@ -302,7 +302,7 @@ Una vez obtenida la TCEA individual de cada letra o factura, es necesario calcul
 
 ## Diseño de Datos de prueba
 <p align="justify">
-Para validar la correcta implementación del modelo desarrollado en la administración de cartera de descuento de facturas,  se han diseñado dos conjuntos de datos de prueba. Estos datos permiten comprobar la veracidad del cálculo de la Tasa de Coste Efectivo Anual (TCEA).
+Para validar la correcta implementación del modelo desarrollado en la administración de cartera de descuento de facturas,  se han diseñado tres conjuntos de datos de prueba. Estos datos permiten comprobar la veracidad del cálculo de la Tasa de Coste Efectivo Anual (TCEA).
 </p>
 
 <ins>**Primer Juego de Datos de Prueba**<ins>
