@@ -131,18 +131,28 @@ Donde:
     it: Tasa de costo efectiva correspondiente al periodo de pago de la cuota (Tasa Interna de Retorno - TIR)
     k: Número de periodos de pago en un año
 
-## Análisis y Diseño del Sistema
+## Análisis y Diseño del Sistema  
 
-### Análisis de Datos
-#### 5. Análisis y Diseño del Sistema
+### Análisis de Datos  
 
-##### 5.1. Análisis de Datos
+El análisis de datos es el proceso de examinar, limpiar, transformar y modelar datos con el objetivo de descubrir información útil, llegar a conclusiones y respaldar la toma de decisiones. En BillSave, este análisis permite optimizar la gestión de carteras y documentos, mejorando la eficiencia del sistema.  
+
+### Diseño del Sistema  
+
+El diseño del sistema abarca la planificación y estructuración de los componentes técnicos y funcionales de BillSave. Define la arquitectura, la interacción entre módulos y las tecnologías empleadas, garantizando escalabilidad, seguridad y facilidad de mantenimiento.  
+
+#### Análisis y Diseño del Sistema  
+
+Esta fase combina la evaluación de requisitos y la conceptualización de soluciones técnicas. Se identifican necesidades del usuario, se modelan los procesos y se diseñan estructuras lógicas que permitan un desarrollo eficiente y alineado con los objetivos del proyecto.  
+
+
+##### Análisis de Datos
 
 <p align="justify">
 El análisis de datos desempeña un papel fundamental en cualquier proyecto, ya que proporciona una visión profunda y significativa que impulsa la toma de decisiones informadas y la eficacia operativa.
 </p>
 
-###### 5.1.1. Datos de Entrada
+###### Datos de Entrada
 
 **Login Page (Pantalla de inicio de sesión)**
 | Nombre | Descripción | Tipo de Datos | Formato |
@@ -177,14 +187,14 @@ El análisis de datos desempeña un papel fundamental en cualquier proyecto, ya 
 | Moneda | Tipo de moneda utilizada (S/ o USD). | Texto | Cadena de caracteres |
 
 
-###### 5.1.2. Datos Intermedios (Cálculos y Procesamientos)
+###### Datos Intermedios (Cálculos y Procesamientos)
 | Nombre | Descripción | Tipo de Datos | Formato |
 |--------|------------|--------------|---------|
 | TCEA promedio del portafolio | Cálculo del Tasa de Costo Efectivo Anual promedio de los documentos. | Número decimal | Numérico |
 | Estado del documento financiero | Cálculo del estado actual del documento (Activo, Vencido, Pagado). | Texto | Cadena de caracteres |
 
 
-###### 5.1.3. Datos de Salida
+###### Datos de Salida
 **Estado de cuenta actual:**
 | Nombre | Descripción | Tipo de Datos | Formato |
 |--------|------------|--------------|---------|
@@ -196,9 +206,13 @@ El análisis de datos desempeña un papel fundamental en cualquier proyecto, ya 
 - Presentación de las pantallas de interacción con el sistema.  
 - Uso de medios electrónicos para recibir ayuda sobre el uso del sistema.
 
+<p align="justify">
 En un sistema, el diseño de la interfaz de usuario (UI) juega un papel fundamental en la experiencia y eficiencia de los usuarios. Un diseño bien estructurado no solo facilita la navegación y el acceso a la información clave, sino que también garantiza seguridad, accesibilidad y usabilidad en cada interacción.
+</p>
 
+<p align="justify">
 El área de diseño de interfaz se enfoca en crear soluciones visuales intuitivas que optimicen la interacción con el sistema, asegurando que las transacciones financieras, consultas de datos y gestiones operativas se realicen de manera clara y sin fricciones. Para ello, se aplican principios de diseño centrado en el usuario (UX/UI), alineados con normativas de accesibilidad y estándares de la industria financiera.
+</p>
 
 ### Figura 1
 <img src="assets/img/inicio_sesion.PNG" alt="inicio" width="600px"/>   
@@ -417,14 +431,14 @@ Este modelo permite gestionar usuarios con perfiles, administrar documentos fina
     - Relacionado con User, indicando que cada usuario puede administrar varios paquetes de descuento.
     - Relacionado con Documents, ya que un paquete de descuento puede contener varios documentos financieros.
 
-# BillSave - Documentación del Sistema de Información
+## Documentación del Sistema de Información
 
-## 8. Sistemas de Información
+### Sistemas de Información
 
-### **8.1. Conectividad**
+#### **Conectividad**
 La aplicación **BillSave** sigue una arquitectura cliente-servidor basada en API RESTful, facilitando la comunicación entre el frontend y el backend.
 
-#### **8.1.1. Comunicación entre Frontend y Backend**
+##### **Comunicación entre Frontend y Backend**
 - **Frontend:** Desarrollado en **Vue.js**, usa **Axios** para realizar solicitudes HTTP a la API del backend.
 - **Backend:** Construido con **.NET Core y C#**, expone una API RESTful que maneja autenticación, gestión de carteras y facturas.
 - **Configuración de la API:**
@@ -433,34 +447,34 @@ La aplicación **BillSave** sigue una arquitectura cliente-servidor basada en AP
   VITE_SUNAT_API_TOKEN=your-sunat-token-here
   ```
 
-#### **8.1.2. Integraciones Externas**
+##### **Integraciones Externas**
 - **API de SUNAT**: Validación de facturas mediante consultas externas.
 - **Exportación de informes**: Generación de reportes en **Excel** desde el backend.
 
-#### **8.1.3. Infraestructura y Hosting**
-- **Servidor Backend:** Desplegado en **Azure**, **AWS** o servidores locales con soporte para .NET Core.
+##### **Infraestructura y Hosting**
+- **Servidor Backend:** Despliegue en servidores locales con soporte para .NET Core.
 - **Base de Datos:** Implementada en **MySQL**, gestionada con **Entity Framework Core**.
 - **Seguridad:** Implementación de **JWT** para autenticación de usuarios.
 
 ---
 
-### **8.2. Base de Datos: Desarrollo de Backend**
+### **Base de Datos: Desarrollo de Backend**
 El backend de **BillSave** sigue los principios de **Domain-Driven Design (DDD)** y está estructurado en contextos delimitados como **Carteras**, **Facturas** y **Usuarios**.
 
-#### **8.2.1. Tecnologías Utilizadas**
+#### **Tecnologías Utilizadas**
 - **Lenguaje:** C# con .NET Core
 - **Base de Datos:** MySQL, gestionada con **Entity Framework Core**
 - **Autenticación:** JSON Web Tokens (**JWT**)
 - **Documentación API:** **Swagger** para facilitar la interacción con los endpoints
 
-#### **8.2.2. Entidades Principales**
+#### **Entidades Principales**
 La base de datos está estructurada en las siguientes entidades:
 - **Usuarios:** Gestión de credenciales y roles.
 - **Carteras:** Portafolios financieros de facturas.
 - **Facturas:** Documentos financieros asociados a carteras.
 - **Reportes:** Generación y almacenamiento de informes.
 
-#### **8.2.3. Estructura del Backend**
+#### **Estructura del Backend**
 El backend sigue una arquitectura en capas:
 1. **Capa de Presentación (API)** - Controladores de ASP.NET Core.
 2. **Capa de Aplicación** - Servicios y reglas de negocio.
@@ -468,24 +482,24 @@ El backend sigue una arquitectura en capas:
 
 ---
 
-### **8.3. Código Fuente**
+### **Código Fuente**
 
-#### **8.3.1. Estructura del Código**
+#### **Estructura del Código**
+
 ##### **Frontend (Vue.js)**
 ```
 BillSave-app/
 │── src/
-│   ├── components/        # Componentes Vue
-│   ├── views/             # Vistas principales
-│   ├── router/            # Configuración de Vue Router
-│   ├── store/             # Gestión de estado con Pinia
-│   ├── api/               # Integración con Axios
-│   ├── assets/            # Archivos estáticos
+│   ├── assets/            # Archivos estáticos (imágenes, estilos, íconos, etc.)
+│   ├── features/          # Módulos de la aplicación organizados por funcionalidad
+│   ├── public/            # Configuración de Vue Router y archivos públicos
+│   ├── shared/            # Recursos compartidos entre módulos
+│   │   ├── router/        # Definición de rutas de la aplicación
+│   │   ├── services/      # Integración con Axios y otros servicios API
 │   ├── main.js            # Punto de entrada de la aplicación
-│   ├── App.vue            # Componente principal
-│── public/
-│── package.json           # Dependencias del proyecto
-│── vite.config.js         # Configuración de Vite
+│   ├── App.vue            # Componente principal que encapsula la aplicación
+│── package.json           # Dependencias y scripts del proyecto
+│── vite.config.js         # Configuración de Vite para el desarrollo y compilación
 ```
 ##### **Backend (.NET Core con C#)**
 ```
@@ -541,12 +555,15 @@ BillSave-backend/
    http://localhost:5000/swagger
    ```
 
----
-
 ### **Conclusión**
-El sistema de información de **BillSave** está diseñado con **Vue.js para el frontend, .NET Core con C# para el backend y MySQL como base de datos**. La comunicación se realiza mediante **API RESTful** con autenticación segura mediante **JWT**, integrándose con la **API de SUNAT** para validar documentos financieros y permitiendo la exportación de informes en **Excel**. 
+<p align="justify">
+El sistema de información de <b>BillSave</b> está diseñado con <b>Vue.js para el frontend, .NET Core con C# para el backend y MySQL como base de datos</b>. La comunicación se realiza mediante <b>API RESTful</b> con autenticación segura mediante <b>JWT</b>, integrándose con la <b>API de SUNAT</b> para validar documentos financieros y permitiendo la exportación de informes en <b>Excel</b>. 
+</p>
 
+
+<p align="justify">
 Este diseño facilita la gestión de carteras financieras y automatiza el cálculo de la **TCEA**, optimizando la administración de documentos financieros.
+</p>
 
 
 ## Anexos
@@ -560,15 +577,14 @@ Este diseño facilita la gestión de carteras financieras y automatiza el cálcu
 
 - Markdown. (s.f.). *Basic syntax*. Recuperado el 2 de marzo de 2025, de [https://www.markdownguide.org/basic-syntax/](https://www.markdownguide.org/basic-syntax/)  
 
-- Oracle. (2023). *Java Platform, Standard Edition documentation*. Oracle Corporation. Recuperado de [https://docs.oracle.com/javase/8/docs/](https://docs.oracle.com/javase/8/docs/)  
+- Microsoft. (2023). *.NET documentation*. Recuperado de [https://learn.microsoft.com/en-us/dotnet/](https://learn.microsoft.com/en-us/dotnet/)  
+
+- MySQL. (2023). *MySQL 8.0 reference manual*. Recuperado de [https://dev.mysql.com/doc/refman/8.0/en/](https://dev.mysql.com/doc/refman/8.0/en/)  
 
 - OWASP Foundation. (2023). *OWASP ZAP - The Zed Attack Proxy*. Recuperado de [https://www.zaproxy.org/](https://www.zaproxy.org/)  
-
-- Pivotal Software. (2023). *Spring Boot reference guide*. Recuperado de [https://docs.spring.io/spring-boot/docs/current/reference/html/](https://docs.spring.io/spring-boot/docs/current/reference/html/)  
-
-- PostgreSQL Global Development Group. (2023). *PostgreSQL 15 documentation*. Recuperado de [https://www.postgresql.org/docs/15/index.html](https://www.postgresql.org/docs/15/index.html)  
 
 - Santander. (2023). *¿Qué es una cartera de valores?* Recuperado de [https://www.santanderassetmanagement.es/que-es-una-cartera-de-valores/](https://www.santanderassetmanagement.es/que-es-una-cartera-de-valores/)  
 
 - Superintendencia de Banca, Seguros y AFP. (s.f.). *Productos y servicios financieros*. Recuperado de [https://www.sbs.gob.pe/Portals/3/educacion-financiera-pdf/4_Productos%20y%20servicios%202018.pdf](https://www.sbs.gob.pe/Portals/3/educacion-financiera-pdf/4_Productos%20y%20servicios%202018.pdf)  
+
 
