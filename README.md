@@ -515,7 +515,7 @@ BillSave-backend/
 │── BillSave-backend.sln    # Archivo de solución para Visual Studio
 ```
 
-#### **8.3.2. Ejecución del Código**
+#### **Ejecución del Código**
 ##### **Frontend (Vue.js)**
 1. Clonar el repositorio:
    ```bash
